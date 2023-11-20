@@ -17,7 +17,8 @@ import java.util.List;
 
 public class CentreCommercial implements Serializable {
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)    private Long id;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Long id;
     private String nom;
     private String adresse;
     private String login;
