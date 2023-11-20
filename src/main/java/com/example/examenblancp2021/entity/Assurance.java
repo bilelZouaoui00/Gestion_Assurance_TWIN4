@@ -1,8 +1,6 @@
 package com.example.examenblancp2021.entity;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 public class Assurance {
     @Id
@@ -10,4 +8,12 @@ public class Assurance {
     private int  idAssurance;
     private String designation;
     private float montant;
+
+    @ManyToOne
+    @JoinColumn(name = "beneficiaire_id")
+    private Beneficiaire beneficiaire;
+
+    @ManyToOne
+    @JoinColumn(name = "contrat_id")
+    private Contrat contrat;
 }
