@@ -1,8 +1,15 @@
 package com.example.examenblancp2021.entity;
 
 import jakarta.persistence.*;
+import lombok.Getter;
+import lombok.Setter;
 
-public class Assurance {
+import java.io.Serializable;
+
+@Entity
+@Setter
+@Getter
+public class Assurance implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private int  idAssurance;
